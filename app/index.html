@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</head>
+<body ng-controller="VolunteerController">
+  <h2>APP</h2>
+
+  <ul>
+    <li ng-repeat="volunteer in volunteers">
+      {{volunteer.name}},{{volunteer.company}}
+    </li>
+  </ul>
+ 
+</body>
+</html>
