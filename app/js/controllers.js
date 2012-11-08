@@ -3,8 +3,7 @@
 /* Controllers */
 
 
-function VolunteerController($scope) {
-
+function VolunteersCtrl($scope) {
 $scope.volunteers = [{name:'Kory',company:'TW'},{name:'Ryan', company:'TW'}]
 }
 
