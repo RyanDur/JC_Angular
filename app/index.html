@@ -15,9 +15,11 @@
   <h2>APP</h2>
   
   Search: <input ng-model="query">
+  Name:   <input ng-model="search.name">
+  
 
   <ul class="volunteers">
-    <li ng-repeat="volunteer in volunteers | filter:query">
+    <li ng-repeat="volunteer in volunteers | filter:query | filter:search">
       {{volunteer.name}},{{volunteer.company}}
     </li>
   </ul>
