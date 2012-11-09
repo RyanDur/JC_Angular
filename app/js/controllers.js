@@ -3,7 +3,14 @@
 /* Controllers */
 
 
-function VolunteersCtrl($scope) {
-$scope.volunteers = [{name:'Kory',company:'TW'},{name:'Ryan', company:'TW'}]
+function VolunteersCtrl($scope, $http) {
+    var volunteer_url = "/app/volunteers.json"
+    function init() {
+        $http({method:'GET', url:volunteer_url}).success(function(data){
+            $scope.volunteers = data;
+        });
+    }
+    
+    init();
 }
 

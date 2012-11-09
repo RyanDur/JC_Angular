@@ -13,9 +13,11 @@
 </head>
 <body ng-controller="VolunteersCtrl">
   <h2>APP</h2>
+  
+  Search: <input ng-model="query">
 
-  <ul>
-    <li ng-repeat="volunteer in volunteers">
+  <ul class="volunteers">
+    <li ng-repeat="volunteer in volunteers | filter:query">
       {{volunteer.name}},{{volunteer.company}}
     </li>
   </ul>
