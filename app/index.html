@@ -14,9 +14,9 @@
 <body ng-controller="VolunteersCtrl">
   <h2>APP</h2>
   
-  Search: <input ng-model="query">
-  Name:   <input ng-model="search.name">
-  
+  Search:  <input ng-model="query">
+  Name:    <input ng-model="search.name">
+  Company: <input ng-model="search.company">
 
   <ul class="volunteers">
     <li ng-repeat="volunteer in volunteers | filter:query | filter:search">
