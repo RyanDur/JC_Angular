@@ -12,17 +12,24 @@
   <script src="js/directives.js"></script>
 </head>
 <body ng-controller="VolunteersCtrl">
-  <h2>APP</h2>
+	
+    <h2>APP</h2>
   
-  Search:  <input ng-model="query">
-  Name:    <input ng-model="search.name">
-  Company: <input ng-model="search.company">
+    Search:  <input ng-model="query">
+    Name:    <input ng-model="search.name">
+    Company: <input ng-model="search.company">
+	Languages: 	
+				<ul>
+					<li ng-repeat='language in search.languages'>
+						<input type="checkbox" ng-model="language.checked" value="C Plus Plus" />{{language.name}}
+					</li>
+				</ul>
 
-  <ul class="volunteers">
-    <li ng-repeat="volunteer in volunteers | filter:query | filter:search">
-      {{volunteer.name}},{{volunteer.company}}
-    </li>
-  </ul>
+    <ul class="volunteers">
+      <li ng-repeat="volunteer in volunteers | filter:query | filter:search">
+        {{volunteer.name}},{{volunteer.company}}, {{volunteer.languages_interested_in.join(", ")}}
+      </li>
+    </ul>
   
 
  

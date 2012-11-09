@@ -10,6 +10,10 @@ function VolunteersCtrl($scope, $http) {
             $scope.volunteers = data;
         });
     }
+
+	// $scope.search = {};
+	// 	$scope.search.languages = [{name: 'C#', search_value: 'C Sharp', checked: false},
+	// 							   {name: 'PHP', search_value: 'PHP', checked: false}];
     
     init();
 }
